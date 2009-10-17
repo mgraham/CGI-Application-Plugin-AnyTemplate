@@ -3,6 +3,7 @@
 ^blib
 ~$
 \.cvsignore$
+^\.git
 \.bak$
 CVS
 ^cover_db
