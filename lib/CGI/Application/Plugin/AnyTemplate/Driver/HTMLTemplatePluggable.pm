@@ -267,7 +267,7 @@ sub render_template {
 
 =head1 AUTHOR
 
-Michael Graham, C<< <mag-perl@occamstoothbrush.com> >>
+Michael Graham, C<< <mgraham@cpan.org> >>
 
 =head1 COPYRIGHT & LICENSE
 

@@ -410,7 +410,7 @@ sub _require_prerequisite_modules {
 
 =head1 AUTHOR
 
-Michael Graham, C<< <mag-perl@occamstoothbrush.com> >>
+Michael Graham, C<< <mgraham@cpan.org> >>
 
 =head1 BUGS
 
@@ -418,6 +418,10 @@ Please report any bugs or feature requests to
 C<bug-cgi-application-plugin-anytemplate@rt.cpan.org>, or through the web interface at
 L<http://rt.cpan.org>.  I will be notified, and then you'll automatically
 be notified of progress on your bug as I make changes.
+
+=head1 SOURCE
+
+The source code repository for this module can be found at http://github.com/mgraham/CAP-AnyTemplate/
 
 =head1 SEE ALSO
 
