@@ -14,7 +14,7 @@ Revision history for CGI-Application-Plugin-AnyTemplate
           Thanks to William McKee.
 
         - Component handler now weakens reference to containing_template,
-          in an attempt to avoid crazy memory usage.  
+          in an attempt to avoid crazy memory usage.  Thanks to Dan Horne.
           
         - Changes of interest to module maintainers only:
           - t/prereqs-scenarios is now included in the distribution.  
