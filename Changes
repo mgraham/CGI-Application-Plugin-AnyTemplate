@@ -1,20 +1,22 @@
 Revision history for CGI-Application-Plugin-AnyTemplate
 
 0.18    Oct 17, 2009
-        - Can now use Clone::PP if Clone is not installed
-          Thanks to Bianka Martinovic.  Note that there doesn't appear 
-          to be a way to indicate to Module::Build that the module can use
-          either Clone or Clone::PP - that it requires one (but not both) 
-          of them.  So for now, Clone is still listed as a prerequisite.
+        - Can now use Clone::PP if Clone is not installed.
+          Thanks to Bianka Martinovic (RT #37999).  Note that there
+          doesn't appear to be a way to indicate to Module::Build that
+          the module can use either Clone or Clone::PP - that it
+          requires one (but not both) of them.  So for now, Clone is
+          still listed as a prerequisite.
 
         - updated Template::Toolkit driver docs to indicate how to use 
-          different encodings.  Thanks to Shmuel Fomberg.
+          different encodings.  Thanks to Shmuel Fomberg (RT #34791).
         
         - removed spurious call to $template->error on Petal templates.
-          Thanks to William McKee.
+          Thanks to William McKee (RT #20221).
 
         - Component handler now weakens reference to containing_template,
-          in an attempt to avoid crazy memory usage.  Thanks to Dan Horne.
+          in an attempt to avoid crazy memory usage.  Thanks to Dan Horne
+          (RT #18157).
           
         - Changes of interest to module maintainers only:
           - t/prereqs-scenarios is now included in the distribution.  
