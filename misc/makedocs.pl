@@ -52,7 +52,7 @@ foreach my $target (keys %TEXT) {
 foreach my $target (keys %HTML) {
     my $source = $HTML{$target};
 
-    system("pod2html --css=$StyleSheet $source $target");
+    system("pod2html --css=$StyleSheet --infile=$source --outfile=$target");
 
     open my $fh, $target or die "can't read $target: $!\n";
     my $text = <$fh>;
