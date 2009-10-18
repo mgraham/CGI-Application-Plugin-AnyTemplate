@@ -1,5 +1,9 @@
 Revision history for CGI-Application-Plugin-AnyTemplate
 
+0.19    xxxx
+        - Changes of interest to module maintainers only:
+          - source repo now on github: http://github.com/mgraham/CAP-AnyTemplate
+
 0.18    Oct 18, 2009
         - Can now use Clone::PP if Clone is not installed.
           Thanks to Bianka Martinovic (RT #37999).  Note that there
