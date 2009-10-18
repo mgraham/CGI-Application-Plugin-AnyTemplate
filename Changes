@@ -7,25 +7,36 @@ Revision history for CGI-Application-Plugin-AnyTemplate
           either Clone or Clone::PP - that it requires one (but not both) 
           of them.  So for now, Clone is still listed as a prerequisite.
 
-        - Of intereste to module maintainers only:
-          t/prereqs-scenarios is now included in the distribution.  
+        - updated Template::Toolkit driver docs to indicate how to use 
+          different encodings.  Thanks to Shmuel Fomberg.
+        
+        - removed spurious call to $template->error on Petal templates.
+          Thanks to William McKee.
+
+        - Component handler now weakens reference to containing_template,
+          in an attempt to avoid crazy memory usage.  
           
-          This is how I simulate the absense of specific modules when 
-          running the test suite.  For instance, the user may have 
-          HTML::Template::Expr installed, but not HTML::Template::Pluggable.
-          Or they may have Clone::PP installed, but not Clone.
+        - Changes of interest to module maintainers only:
+          - t/prereqs-scenarios is now included in the distribution.  
+            
+            This is how I simulate the absense of specific modules when 
+            running the test suite.  For instance, the user may have 
+            HTML::Template::Expr installed, but not HTML::Template::Pluggable.
+            Or they may have Clone::PP installed, but not Clone.
 
-          To test the various prerequisite scenarios, use the included 
-          prove-prereqs.pl script:
+            To test the various prerequisite scenarios, use the included 
+            prove-prereqs.pl script:
 
-            ./misc/prove-prereqs.pl t/prereq_scenarios -Ilib t/
+              ./misc/prove-prereqs.pl t/prereq_scenarios -Ilib t/
 
-          This runs the test suite several times.  Each time it simulates
-          a different set of unavailable modules.
+            This runs the test suite several times.  Each time it simulates
+            a different set of unavailable modules.
 
-          Adapted from the Perl Hacks book.
+            Adapted from the Perl Hacks book.
+            
+          - fixed the makedocs script to work with more recent pod2html
           
-        - changed noindex to no_index in META.yml
+          - changed noindex to no_index in META.yml
 
 0.17    Nov 07, 2005
         - fixed storage of TT objects so that objects with different
