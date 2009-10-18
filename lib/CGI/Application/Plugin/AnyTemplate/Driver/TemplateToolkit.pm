@@ -179,6 +179,44 @@ See L<"TT OBJECT CACHING (singleton support)">, above.
 
 All other configuration parameters are passed on unchanged to L<Template::Toolkit|Template>.
 
+=head1 CONFIGURING UTF-8 TEMPLATES
+
+C<AnyTemplate> does NOT support L<Template::Toolkit|Template>'s C<binmode> option at runtime:
+
+    # not possible with AnyTemplate
+    $tt->process($infile, $vars, $outfile, { binmode => 1 })
+        || die $tt->error(), "\n";
+    
+    # not possible with AnyTemplate
+    $tt->process($infile, $vars, $outfile, binmode => 1)
+        || die $tt->error(), "\n";
+    
+    # not possible with AnyTemplate
+    $tt->process($infile, $vars, $outfile, binmode => ':utf8')
+        || die $tt->error(), "\n";
+
+Instead, use the C<ENCODING> option in the initial config:
+     
+    $self->template->config(
+        default_type => 'TemplateToolkit',
+        TemplateToolkit => { 
+            ENCODING => 'UTF-8' 
+        }
+    );
+
+If you have a mix of encodings in your templates, use a separate 
+C<AnyTemplate> configuration for each encoding:
+
+    $self->template('ascii')->config(
+        default_type => 'TemplateToolkit',
+    );
+    $self->template('utf-8')->config(
+        default_type => 'TemplateToolkit',
+        TemplateToolkit => { 
+            ENCODING => 'UTF-8' 
+        }
+    );
+
 =cut
 
 sub driver_config_keys {
