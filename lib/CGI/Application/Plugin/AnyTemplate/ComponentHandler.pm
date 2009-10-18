@@ -62,6 +62,7 @@ sub new {
     $self->{'containing_template'} = $args{'containing_template'};
 
     weaken $self->{'webapp'};
+    weaken $self->{'containing_template'};
 
     return $self;
 }
