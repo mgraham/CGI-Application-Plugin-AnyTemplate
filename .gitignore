@@ -12,7 +12,6 @@ changes.txt
 *.tar
 *.sw?
 MANIFEST
-README
 META.yml
 Makefile.PL
 
