@@ -1087,7 +1087,7 @@ BUGS
 
 SOURCE
     The source code repository for this module can be found at
-    http://github.com/mgraham/CAP-AnyTemplate/
+    http://github.com/mgraham/CGI-Application-Plugin-AnyTemplate/
 
 SEE ALSO
         CGI::Application::Plugin::AnyTemplate::Base
